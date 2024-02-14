@@ -9,7 +9,7 @@ const queryClient = new QueryClient({
 });
 
 describe("회원가입 테스트", () => {
-  test("테스트", () => {
+  beforeEach(() => {
     const routes = [
       {
         path: "/signup",
@@ -27,5 +27,11 @@ describe("회원가입 테스트", () => {
         <RouterProvider router={router} />
       </QueryClientProvider>
     );
+  });
+
+  test("비밀번호와 비밀번호 확인 값이 일치하지 않으면 에러메세지가 표시된다", () => {
+    // given - 회원가입 페이지가 그려짐
+    // when - 비밀번호와 비밀번호 확인 값이 일치하지 않음
+    // then - 에러메세지가 표시됨
   });
 });
