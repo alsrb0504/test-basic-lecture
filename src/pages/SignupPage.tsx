@@ -19,6 +19,9 @@ export default function SignupPage() {
     }
   }, [isSuccess]);
 
+  console.log(`[Log] password = ${password}`);
+  console.log(`[Log] confirmPassword = ${confirmPassword}`);
+
   return (
     <Wrapper>
       <div>
