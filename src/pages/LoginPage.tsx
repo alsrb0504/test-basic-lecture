@@ -20,7 +20,7 @@ export default function LoginPage() {
     <Wrapper>
       <div>
         <Header>
-          <Title>이메일로 로그인</Title>
+          <Title>Login with email</Title>
           <CloseButton>
             <img
               alt="close"
@@ -30,25 +30,25 @@ export default function LoginPage() {
         </Header>
         <InputSection>
           <InputWrapper>
-            <Label htmlFor="emailInput">이메일</Label>
+            <Label htmlFor="emailInput">Eamil</Label>
             <Input
               id="emailInput"
               data-cy="emailInput"
               type="text"
-              placeholder="이메일을 입력해주세요"
+              placeholder="Input Email"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setEmail(e.target.value)
               }
             />
-            {isError && <ErrorMessage>로그인 정보를 확인해주세요</ErrorMessage>}
+            {isError && <ErrorMessage>Check Login Info</ErrorMessage>}
           </InputWrapper>
           <InputWrapper>
-            <Label htmlFor="passwordInput">비밀번호</Label>
+            <Label htmlFor="passwordInput">Password</Label>
             <Input
               id="passwordInput"
               data-cy="passwordInput"
               type="password"
-              placeholder="비밀번호를 입력해주세요"
+              placeholder="Input Password"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setPassword(e.target.value)
               }
@@ -56,7 +56,7 @@ export default function LoginPage() {
           </InputWrapper>
           {isError && (
             <ErrorMessage data-testid="error-message">
-              로그인 정보를 확인해주세요
+              Check Login Info
             </ErrorMessage>
           )}
         </InputSection>
@@ -66,7 +66,7 @@ export default function LoginPage() {
         disabled={!email || !password}
         onClick={() => handleLogin({ username: email, password })}
       >
-        로그인
+        Login
       </LoginButton>
     </Wrapper>
   );

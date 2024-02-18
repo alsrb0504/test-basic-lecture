@@ -5,5 +5,6 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    fileServerFolder: "./cypress", // 올바른 설정
   },
 });
